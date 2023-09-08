@@ -40,27 +40,27 @@
             <tbody>
               <tr>
                 <td class="name">Salmon</td>
-                <td class="unitPrice">$50.00</td>
+                <td class="unitPrice">$<span>50</span>.00</td>
                 <td class="quantity"><input type="number" value="1" class="w-sm-50"><button class="btn btn-danger btn-sm ms-sm-2">Remove</button></td>
-                <td class="totalPrice">$50.00</td>
+                <td class="totalPrice">$<span>50</span>.00</td>
               </tr>
               <tr>
                 <td class="name">Steak</td>
-                <td class="unitPrice">$60.00</td>
+                <td class="unitPrice">$<span>50</span>.00</td>
                 <td class="quantity"><input type="number" value="1"><button class="btn btn-danger btn-sm ms-sm-2">Remove</button></td>
-                <td class="totalPrice">$60.00</td>
+                <td class="totalPrice">$<span>50</span>.00</td>
               </tr>
               <tr>
                 <td class="name">Pork</td>
-                <td class="unitPrice">$40.00</td>
+                <td class="unitPrice">$<span>50</span>.00</td>
                 <td class="quantity"><input type="number" value="1"><button class="btn btn-danger btn-sm ms-sm-2">Remove</button></td>
-                <td class="totalPrice">$40.00</td>
+                <td class="totalPrice">$<span>50</span>.00</td>
               </tr>
               <tr>
                 <td class="name">Beef</td>
-                <td class="unitPrice">$35.00</td>
+                <td class="unitPrice">$<span>50</span>.00</td>
                 <td class="quantity"><input type="number" value="1"><button class="btn btn-danger btn-sm ms-sm-2">Remove</button></td>
-                <td class="totalPrice">$35.00</td>
+                <td class="totalPrice">$<span>50</span>.00</td>
               </tr>
             </tbody>
           </table>
@@ -70,7 +70,7 @@
           <input type="text" name="unitPrice" placeholder="Unit Price">
           <button class="btn btn-primary ms-sm-2 mt-2 mt-sm-0">Add Item</button>
         </form>
-        <button class="btn btn-secondary my-4 ms-2 col-6">Calculate Prices</button>
+        <button class="btn btn-secondary my-4 ms-2 col-6" id="calcTotal">Calculate Prices</button>
         <div class="col-12 col-md-6">
           <h2>Total Price: </h2>
           <h2 id="grandTotal">$0.00</h2>
