@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <script src="js/application.js"></script>
-
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
     <!-- Bootstrap 5 CSS -->
     <link
@@ -23,56 +22,68 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
       <h1 class="text-center my-4">Shopping Cart</h1>
       <div class="row">
         <div class="col-12">
-          <table class="table table-bordered">
+          <table class="table table-secondary table-hover table-bordered">
+            <!-- Table Headings -->
             <thead>
               <th scope="col">Name</th>
-              <th scope="col">Price</th>
+              <th scope="col">Unit Price</th>
               <th scope="col">Quantity</th>
               <th scope="col">Total Price</th>
             </thead>
+            <!-- Table Content -->
             <tbody>
               <tr>
                 <td class="name">Salmon</td>
-                <td class="unitPrice">$<span>50</span>.00</td>
-                <td class="quantity"><input type="number" value="1" class="w-sm-50"><button class="btn btn-danger btn-sm ms-sm-2">Remove</button></td>
-                <td class="totalPrice">$<span>50</span>.00</td>
+                <td class="unitPrice">$<span>35.00</span></td>
+                <td class="quantity">
+                  <input type="number" value="1" class="col-6 col-md-4"/><button class="remove btn btn-danger btn-sm ms-3">Remove</button>
+                </td>
+                <td class="totalPrice">$<span>35.00</span></td>
               </tr>
               <tr>
                 <td class="name">Steak</td>
-                <td class="unitPrice">$<span>50</span>.00</td>
-                <td class="quantity"><input type="number" value="1"><button class="btn btn-danger btn-sm ms-sm-2">Remove</button></td>
-                <td class="totalPrice">$<span>50</span>.00</td>
+                <td class="unitPrice">$<span>40.00</span></td>
+                <td class="quantity">
+                  <input type="number" value="1" class="col-6 col-md-4"/><button class="remove btn btn-danger btn-sm ms-3">Remove</button>
+                </td>
+                <td class="totalPrice">$<span>40.00</span></td>
               </tr>
               <tr>
                 <td class="name">Pork</td>
-                <td class="unitPrice">$<span>50</span>.00</td>
-                <td class="quantity"><input type="number" value="1"><button class="btn btn-danger btn-sm ms-sm-2">Remove</button></td>
-                <td class="totalPrice">$<span>50</span>.00</td>
+                <td class="unitPrice">$<span>25.50</span></td>
+                <td class="quantity">
+                  <input type="number" value="1" class="col-6 col-md-4"/><button class="remove btn btn-danger btn-sm ms-3">Remove</button>
+                </td>
+                <td class="totalPrice">$<span>25.50</span></td>
               </tr>
               <tr>
                 <td class="name">Beef</td>
-                <td class="unitPrice">$<span>50</span>.00</td>
-                <td class="quantity"><input type="number" value="1"><button class="btn btn-danger btn-sm ms-sm-2">Remove</button></td>
-                <td class="totalPrice">$<span>50</span>.00</td>
+                <td class="unitPrice">$<span>30.00</span></td>
+                <td class="quantity">
+                  <input type="number" value="1" class="col-6 col-md-4"/><button class="remove btn btn-danger btn-sm ms-3">Remove</button>
+                </td>
+                <td class="totalPrice">$<span>30.00</span></td>
               </tr>
             </tbody>
           </table>
         </div>
+        <!-- Form to add new item -->
         <form id="addItem" class="col-12 mb-3 mt-2">
-          <input type="text" name="name" placeholder="Name">
-          <input type="text" name="unitPrice" placeholder="Unit Price">
-          <button class="btn btn-primary ms-sm-2 mt-2 mt-sm-0">Add Item</button>
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="text" name="unitPrice" placeholder="Unit Price" required />
+          <button class="btn btn-primary ms-sm-2 mt-2 mt-sm-0" id="addItem">Add Item</button>
         </form>
-        <button class="btn btn-secondary my-4 ms-2 col-6" id="calcTotal">Calculate Prices</button>
+        <button class="btn btn-success my-4 ms-2 col-6" id="calcTotal">Calculate Grand Total</button>
+        <!-- Grand Total Price -->
         <div class="col-12 col-md-6">
-          <h2>Total Price: </h2>
+          <h2>Total Price:</h2>
           <h2 id="grandTotal">$0.00</h2>
         </div>
       </div>
